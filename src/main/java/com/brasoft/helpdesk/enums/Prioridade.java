@@ -2,7 +2,7 @@ package com.brasoft.helpdesk.enums;
 
 public enum Prioridade {
 	
-	ABERTO(0, "ABERTO"), ANDAMENTO(1, "ANDAMENTO"), TECNICO(2, "ENCERRADO");
+	BAIXA(0, "BAIXA"), MEDIA(1, "MEDIA"), ALTA(2, "ALTA");
 	
 	private Integer codigo;
 	private String descricao;
@@ -31,7 +31,7 @@ public enum Prioridade {
 				return x;
 			}
 		}
-		throw new IllegalArgumentException("status invalido");
+		throw new IllegalArgumentException("prioridade invalida");
 	}
 	
 	
