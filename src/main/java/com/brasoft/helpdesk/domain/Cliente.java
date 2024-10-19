@@ -1,15 +1,25 @@
 package com.brasoft.helpdesk.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente extends Pessoa {
+import com.brasoft.helpdesk.enums.Perfil;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+
+@Entity
+public class Cliente extends Pessoa implements Serializable {
 	
-	private List<Chamado> chamados = new ArrayList();
+	private static final long serialVersionUID = 1L;
+	
+	@OneToMany(mappedBy = "cliente")
+	private List<Chamado> chamados = new ArrayList<>();
 
 	public Cliente() {
 		super();
-		// TODO Auto-generated constructor stub
+		addPerfil(Perfil.CLIENTE);
 	}
 
 	public Cliente(Integer id, String nome, String cpf, String email, String senha) {
