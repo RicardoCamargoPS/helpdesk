@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
-import org.hibernate.annotations.ManyToAny;
-
 import com.brasoft.helpdesk.enums.Prioridade;
 import com.brasoft.helpdesk.enums.Status;
 import com.fasterxml.jackson.annotation.JsonFormat;
